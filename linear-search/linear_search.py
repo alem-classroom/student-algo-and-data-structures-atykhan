@@ -6,6 +6,6 @@ def linear_search(lst, to_find):
     	return(lst.index(to_find))
     else:
     	return(-1)
-# alph = [1,2,3,4,5,6]
-# ind = 8
+# alph = [1,2,3,24,5,6]
+# ind = 1
 # print(linear_search(alph,ind))
