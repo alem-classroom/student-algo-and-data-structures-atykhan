@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  autograde_job:
+    runs-on: ubuntu-latest
+    name: alem python autograde
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Autograde action
+        uses: alem-classroom/python-autograde@v1
+        id: hello2
+        with:
+          grade: ${{ secrets.GRADE }}
+          url: 'alem-classroom/test-algo-and-data-structures'
+          token: ${{ secrets.AUTH_TOKEN }}
