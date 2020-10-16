@@ -7,7 +7,7 @@ def fib(num):
     elif num == 1:
     	return(1)
     else:
-    	for i in range (num-1):
+    	for i in range (num):
     		fsled = fprev2 + fprev
     		fprev = fprev2
     		fprev2 = fsled
