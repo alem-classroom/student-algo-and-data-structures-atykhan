@@ -8,12 +8,9 @@ def selection_sort(lst):
 		return(lst)
 	elif a > 1:
 		for i in range (a):
-			bmin = i
-			for j in range(i+1, len(lst)):
-				if lst[bmin] > lst[j]:
-					bmin = j
-			lst[i], lst[bmin] = lst[bmin], lst[i]
-		return(lst)
-
-listt = [5,2,3,1,3,9,7,2,6]
-print(selection_sort(listt))
+			bmin = min(lst)
+			cmax = max(lst)
+			newlst.append(bmin)
+			minpos = lst.index(min(lst))
+			lst[minpos] = cmax
+		return(newlst)
