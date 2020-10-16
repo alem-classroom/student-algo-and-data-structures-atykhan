@@ -5,7 +5,7 @@ def linear_search(lst, to_find):
 	a = int(len(lst))
 	for i in range (a):
 		b = -1
-		if to_find == lst[i]:
+		if lst[i] == to_find:
 			b = i
 			break
 	return(b)
