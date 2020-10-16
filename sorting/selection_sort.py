@@ -13,8 +13,8 @@ def selection_sort(lst):
 				if lst[bmin] > lst[j]:
 					bmin = j
 					# change postion of minimum variable in list
-			lst[i], lst[bmin] = lst[bmin], lst[i]asd
+			lst[i], lst[bmin] = lst[bmin], lst[i]
 		return(lst)
 
-listt = [5,2,3,1,3,9,7,2,6]
-print(selection_sort(listt))
+# listt = [5,2,3,1,3,9,7,2,6]
+# print(selection_sort(listt))
