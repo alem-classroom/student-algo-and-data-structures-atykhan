@@ -7,8 +7,8 @@ def linear_search(lst, to_find):
 		b = -1
 		if to_find == lst[i]:
 			b = i
-			return(b)
 			break
+	return(b)
 # alph = [1,2,3,24,5,6]
-# ind = 5
+# ind = 55
 # print(linear_search(alph,ind))
