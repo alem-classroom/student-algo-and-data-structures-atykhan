@@ -16,15 +16,13 @@ class LinkedList:
         count = 0
         if cur_node.next is None:
             print(cur_node.value)
-        elif cur_node.next is not None:
+        else:
             while cur_node.next is not None:
                 count +=1
                 cur_node = cur_node.next
                 if count == 1:
                     print(cur_node.value)
                     break
-        else:
-            return(None)
         # print(cur_node.value)
     def insert_back(self, node):
         # insert node to the back of the Linked List
