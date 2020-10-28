@@ -21,8 +21,8 @@ class LinkedList:
         return(self.head)
     def insert_back(self, node):
         # insert node to the back of the Linked List
-        if head == None:
-            head = Node(node)
+        if self.head == None:
+            self.head = Node(node)
         else:
             new_node = Node(node)
             cur = self.head
