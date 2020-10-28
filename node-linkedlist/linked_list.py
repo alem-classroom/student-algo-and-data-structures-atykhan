@@ -13,8 +13,8 @@ class LinkedList:
         # return head of the Linked List
         cur = self.head
         count = 0
-        while cur.next is not None:
-            count +=count
+        while cur.next != None:
+            count +=1
             if count == 1:
                 return(self.head)
             break
@@ -23,19 +23,20 @@ class LinkedList:
         # insert node to the back of the Linked List
         new_node = Node(node)
         cur = self.head
-        if cur.next is None:
-            cur.next= new_node
+        while cur.next !=None:
+            cur = cur.next
+        cur.next= new_node
     def get_last(self):
         # return last node of the Linked List
         cur = self.head
-        while cur.next is None:
+        while cur.next == None:
             return(self.head)
     def get_list(self):
         # create list and append every value of Linked List to it.
         # return the list
         lst = []
         cur = self.head
-        while cur.next is not None:
+        while cur.next != None:
             lst.append(cur.next)
         return(lst)
             
