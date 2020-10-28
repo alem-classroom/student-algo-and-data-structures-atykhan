@@ -14,7 +14,9 @@ class LinkedList:
         # return head of the Linked List
         cur_node = self.head
         count = 0
-        if cur_node.next is None:
+        if cur_node.value is not True:
+            print(None)
+        elif cur_node.next is None:
             print(cur_node.value)
         else:
             while cur_node.next is not None:
