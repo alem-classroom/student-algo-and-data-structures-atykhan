@@ -23,12 +23,12 @@ class LinkedList:
         # insert node to the back of the Linked List
         new_node = Node(node)
         cur = self.head
-        if cur.next == None:
+        if cur.next is None:
             cur.next= new_node
     def get_last(self):
         # return last node of the Linked List
         cur = self.head
-        while cur.next == None:
+        while cur.next is None:
             return(self.head)
     def get_list(self):
         # create list and append every value of Linked List to it.
