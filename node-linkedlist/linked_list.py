@@ -13,7 +13,7 @@ class LinkedList:
         # return head of the Linked List
         cur = self.head
         count = 0
-        while cur.next != None:
+        while cur.next is not None:
             count +=count
             if count == 1:
                 return(self.head)
@@ -35,7 +35,7 @@ class LinkedList:
         # return the list
         lst = []
         cur = self.head
-        while cur.next != None:
+        while cur.next is not None:
             lst.append(cur.next)
         return(lst)
             
