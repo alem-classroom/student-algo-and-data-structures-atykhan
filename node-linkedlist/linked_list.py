@@ -21,11 +21,14 @@ class LinkedList:
         return(self.head)
     def insert_back(self, node):
         # insert node to the back of the Linked List
-        new_node = node(node)
-        cur = self.head
-        while cur.next !=None:
-            cur = cur.next
-        cur.next= new_node
+        if head == None:
+            head = Node(node)
+        else:
+            new_node = Node(node)
+            cur = self.head
+            while cur.next != None:
+                cur = cur.next
+            cur.next= new_node
     def get_last(self):
         # return last node of the Linked List
         cur = self.head
