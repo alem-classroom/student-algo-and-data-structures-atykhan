@@ -7,36 +7,52 @@ class Node:
 class LinkedList:
     def __init__(self, head = None):
         # initialize Linked List by initializing head
-        self.head = head
+        self.head = Node()
+        
     
     def get_head(self):
         # return head of the Linked List
-        cur = self.head
+        cur_node = self.head
         count = 0
-        while cur.next != None:
+        while cur_node.next is not None:
             count +=1
+            cur_node = cur_node.next
             if count == 1:
-                return(self.head)
-            break
-        return(self.head)
+                print(cur_node.value)
+                break
+        # print(cur_node.value)
     def insert_back(self, node):
         # insert node to the back of the Linked List
         new_node = Node(node)
-        cur = self.head
-        while cur.next !=None:
-            cur = cur.next
-        cur.next= new_node
+        cur_node = self.head
+        while cur_node.next is not None:
+            cur_node = cur_node.next
+        cur_node.next= new_node
+        # print(cur_node)
     def get_last(self):
         # return last node of the Linked List
-        cur = self.head
-        while cur.next == None:
-            return(self.head)
+        cur_node = self.head
+        while cur_node.next is not None:
+            cur_node = cur_node.next
+            if cur_node.next is None:
+                print(cur_node.value)
+                break
+        
     def get_list(self):
         # create list and append every value of Linked List to it.
         # return the list
         lst = []
-        cur = self.head
-        while cur.next != None:
-            lst.append(cur.next)
-        return(lst)
-            
+        cur_node = self.head
+        while cur_node.next is not None:
+            cur_node = cur_node.next
+            lst.append(cur_node.value)
+        print(lst)
+
+# my_list = LinkedList()
+
+# my_list.insert_back(1)
+# my_list.insert_back(2)
+# my_list.insert_back(4)
+# my_list.get_list()
+# my_list.get_last()
+# my_list.get_head()
