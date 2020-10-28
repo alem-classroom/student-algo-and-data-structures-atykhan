@@ -14,7 +14,7 @@ class LinkedList:
         # return head of the Linked List
         cur_node = self.head
         count = 0
-        if cur_node.value is not True:
+        if cur_node.value is False:
             print(None)
         elif cur_node.next is None:
             print(cur_node.value)
@@ -37,11 +37,16 @@ class LinkedList:
     def get_last(self):
         # return last node of the Linked List
         cur_node = self.head
-        while cur_node.next is not None:
-            cur_node = cur_node.next
-            if cur_node.next is None:
-                print(cur_node)
-                break
+        if cur_node.value is False:
+            print(None)
+        elif cur_node.next is None:
+            print(cur_node.value)
+        else:
+            while cur_node.next is not None:
+                cur_node = cur_node.next
+                if cur_node.next is None:
+                    print(cur_node.value)
+                    break
         
     def get_list(self):
         # create list and append every value of Linked List to it.
@@ -55,9 +60,9 @@ class LinkedList:
 
 my_list = LinkedList()
 
-my_list.insert_back(1)
-my_list.insert_back(2)
-my_list.insert_back(4)
+# my_list.insert_back(1)
+# my_list.insert_back(2)
+# my_list.insert_back(4)
 my_list.get_list()
 my_list.get_last()
 my_list.get_head()
