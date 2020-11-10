@@ -56,11 +56,15 @@ class LinkedList:
         while cur_node.next is not None:
             cur_node = cur_node.next
             lst.append(cur_node.value)
-        print(lst)
+        return(lst)
 
-# my_list = LinkedList()
+my_list = LinkedList()
 
+my_list.insert_back(4)
+my_list.insert_back(3)
+my_list.insert_back(1)
+my_list.insert_back(2)
+my_list.get_list()
+my_list.get_head()
+my_list.get_last()
 
-# my_list.get_list()
-# my_list.get_last()
-# my_list.get_head()
