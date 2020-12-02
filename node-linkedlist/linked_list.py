@@ -48,6 +48,7 @@ class LinkedList:
         lst = []
         cur_node = self.head
         while cur_node.next is not None:
+            
             cur_node = cur_node.next
             lst.append(cur_node.value)
         return(lst)
@@ -55,7 +56,7 @@ class LinkedList:
 # my_list = LinkedList()
 
 # my_list.insert_back(4)
-# my_list.insert_back(3)asdas
+# my_list.insert_back(3)
 # my_list.insert_back(1)
 # my_list.insert_back(2)
 # print(my_list.get_list())
