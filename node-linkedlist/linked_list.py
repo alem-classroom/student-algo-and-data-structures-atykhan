@@ -14,17 +14,15 @@ class LinkedList:
         # return head of the Linked List
         cur_node = self.head
         count = 0
-        if cur_node.value is False:
-            return(None)
-        elif cur_node.next is None:
-            return(cur_node.value)
-        else:
-            while cur_node.next is not None:
-                count +=1
-                cur_node = cur_node.next
-                if count == 1:
-                    return(cur_node.value)
-                    break
+        while cur_node.next is not None and count == 0:
+        	cur_node = cur_node.next
+        	count +=1
+        return(cur_node.value)
+
+        # if cur_node is False:
+        #     return(self.value)
+        # else:
+        #     return(cur_node.value)
         # print(cur_node.value)
     def insert_back(self, node):
         # insert node to the back of the Linked List
@@ -39,16 +37,10 @@ class LinkedList:
     def get_last(self):
         # return last node of the Linked List
         cur_node = self.head
-        if cur_node.value is False:
-            return(None)
-        elif cur_node.next is None:
-            return(cur_node.value)
-        else:
-            while cur_node.next is not None:
-                cur_node = cur_node.next
-                if cur_node.next is None:
-                    return(cur_node.value)
-                    break
+        while cur_node.next is not None:
+        	cur_node = cur_node.next
+        
+        return(cur_node.value)
         
     def get_list(self):
         # create list and append every value of Linked List to it.
@@ -60,13 +52,12 @@ class LinkedList:
             lst.append(cur_node.value)
         return(lst)
 
-# my_list = LinkedList()
+my_list = LinkedList()
 
 # my_list.insert_back(4)
 # my_list.insert_back(3)
 # my_list.insert_back(1)
 # my_list.insert_back(2)
-# my_list.get_list()
-# my_list.get_head()
-# my_list.get_last()
-
+print(my_list.get_list())
+print(my_list.get_head())
+print(my_list.get_last())
