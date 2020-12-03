@@ -50,7 +50,7 @@ class LinkedList:
         while cur_node.next is not None:
             
             cur_node = cur_node.next
-            lst.append(cur_node.value)
+            lst.append(cur_node)
         return(lst)
 
 my_list = LinkedList()
