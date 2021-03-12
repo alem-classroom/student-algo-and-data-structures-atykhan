@@ -37,12 +37,13 @@ class LinkedList:
     def get_list(self):
         # create list and append every value of Linked List to it.
         # return the list
-        lst = []
+        
         
         if self.head is None:
-        	return []
+         	return []
         cur_node = self.head
-        while cur_node.next is not None:
+        lst = []
+        while cur_node:
             
             lst.append(cur_node.value)
             cur_node = cur_node.next
@@ -52,7 +53,7 @@ class LinkedList:
 
 my_list = LinkedList()
 
-my_list.insert_back(725)
+# my_list.insert_back()
 
 print(my_list.get_list())
 print(len(my_list.get_list()))
