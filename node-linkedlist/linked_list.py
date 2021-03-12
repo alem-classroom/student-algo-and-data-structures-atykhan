@@ -37,15 +37,13 @@ class LinkedList:
     def get_list(self):
         # create list and append every value of Linked List to it.
         # return the list
-        lst = []
-        cur_node = self.head
-        while cur_node:
-            
-
-            cur_node = cur_node.next
-            
-            lst.append(cur_node.value)
-        return(lst)
+        pointer = self.head
+        sll_list = []
+        
+        while pointer:
+            sll_list.append(pointer.value)
+            pointer = pointer.next
+        return sll_list
 
 my_list = LinkedList()
 
