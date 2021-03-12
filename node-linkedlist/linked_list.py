@@ -13,7 +13,7 @@ class LinkedList:
     def get_head(self):
         # return head of the Linked List
         cur_node = self.head
-        # cur_node = cur_node.next
+        cur_node = cur_node.next
         return(cur_node.value)
 
     def insert_back(self, node):
@@ -60,4 +60,4 @@ e2.next = e3
 print(my_list.get_list())
 print(len(my_list.get_list()))
 print(my_list.get_head())
-print(my_list.get_last())
+# print(my_list.get_last())
