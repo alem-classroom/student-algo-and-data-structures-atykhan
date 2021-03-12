@@ -38,19 +38,23 @@ class LinkedList:
         # create list and append every value of Linked List to it.
         # return the list
         lst = []
+        
+        if self.head is None:
+        	return []
         cur_node = self.head
         while cur_node.next is not None:
             
+            lst.append(cur_node.value)
             cur_node = cur_node.next
             
-            lst.append(cur_node)
+            
         return(lst)
 
-# my_list = LinkedList()
+my_list = LinkedList()
 
-# # my_list.insert_back(725)
+my_list.insert_back(725)
 
-# print(my_list.get_list(725))
-# print(len(my_list.get_list()))
-# # print(my_list.get_head())
-# # print(my_list.get_last())
+print(my_list.get_list())
+print(len(my_list.get_list()))
+# print(my_list.get_head())
+# print(my_list.get_last())
