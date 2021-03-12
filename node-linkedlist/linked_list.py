@@ -14,8 +14,8 @@ class LinkedList:
         # return head of the Linked List
         cur_node = self.head
         cur_node = cur_node.next
-        return(cur_node.value)
-        
+        return(cur_node)
+
     def insert_back(self, node):
         # insert node to the back of the Linked List
         
@@ -32,7 +32,7 @@ class LinkedList:
         while cur_node.next is not None:
         	cur_node = cur_node.next
         
-        return(cur_node.value)
+        return(cur_node)
         
     def get_list(self):
         # create list and append every value of Linked List to it.
@@ -42,7 +42,7 @@ class LinkedList:
         while cur_node.next is not None:
             
             cur_node = cur_node.next
-            val = cur_node.value
+            val = cur_node
             lst.append(val)
         return(lst)
 
