@@ -13,17 +13,9 @@ class LinkedList:
     def get_head(self):
         # return head of the Linked List
         cur_node = self.head
-        count = 0
-        while cur_node.next is not None and count == 0:
-        	cur_node = cur_node.next
-        	count +=1
+        cur_node = cur_node.next
         return(cur_node.value)
-
-        # if cur_node is False:
-        #     return(self.value)
-        # else:
-        #     return(cur_node.value)
-        # print(cur_node.value)
+        
     def insert_back(self, node):
         # insert node to the back of the Linked List
         
