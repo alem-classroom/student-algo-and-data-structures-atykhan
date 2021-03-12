@@ -45,17 +45,16 @@ class LinkedList:
         lst = []
         while cur_node:
             
-            lst.append(cur_node.value)
             cur_node = cur_node.next
-            
+            lst.append(cur_node.value)
             
         return(lst)
 
-my_list = LinkedList()
+# my_list = LinkedList()
 
 # my_list.insert_back()
 
-print(my_list.get_list())
-print(len(my_list.get_list()))
-# print(my_list.get_head())
-# print(my_list.get_last())
+# print(my_list.get_list())
+# print(len(my_list.get_list()))
+# # print(my_list.get_head())
+# # print(my_list.get_last())
