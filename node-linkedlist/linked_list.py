@@ -43,13 +43,14 @@ class LinkedList:
             
             cur_node = cur_node.next
             
-            lst.append(cur_node.value)
+            lst.append(cur_node)
         return(lst)
 
-my_list = LinkedList()
+# my_list = LinkedList()
 
-# my_list.insert_back()
+# # my_list.insert_back(725)
 
-print(my_list.get_list())
-# print(my_list.get_head())
-# print(my_list.get_last())
+# print(my_list.get_list(725))
+# print(len(my_list.get_list()))
+# # print(my_list.get_head())
+# # print(my_list.get_last())
